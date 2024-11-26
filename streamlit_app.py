@@ -18,7 +18,7 @@ client = OpenAI(
 )
 
 
-def load_model(filename):
+def load_model():
   with open(filename, "rb") as file:
     return pickle.load(file)
 
