@@ -18,6 +18,25 @@ client = OpenAI(
 )
 
 
+def load_model(filename):
+  with open(filename, "rb") as file:
+    return pickle.load(file)
+
+xgboost_model = load_model('xgbmodel.pkl')
+
+naive_bayes_model = load_model('nbmodel.pkl')
+
+random_forest_model = load_model('rfmodel.pkl')
+
+decision_tree_model = load_model('dtmodel.pkl')
+
+svm_model = load_model('svmmodel.pkl')
+
+knn_model = load_model('knnmodel.pkl')
+
+voting_classifier_model = load_model('voting_clf.pkl')
+
+xgboost_SMOTE_model = load_model('xgboost-SMOTE.pkl')
 
 xgboost_featureEngineered_model = load_model('xgboost-featureEngineered.pkl')
 
